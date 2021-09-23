@@ -1,10 +1,10 @@
-from flask import Flask, app
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Sveika, svetdiena!"
+    return render_template('home.html')
 
 @app.route('/kontakti')
 def kontakti():
